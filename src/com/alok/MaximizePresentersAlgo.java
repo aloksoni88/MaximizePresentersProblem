@@ -44,6 +44,7 @@ public class MaximizePresentersAlgo {
 		int sessionHour = scanner.nextInt();
 		scanner.close();
 		System.out.println("Total Number of sessions are : ");
+		
 		List<Presentation> result = obj.getNumberOfSessions(sessionHour, sortedList);
 		if (result == null || result.isEmpty()) {
 			System.out.println("Not enough presenters");
@@ -56,6 +57,13 @@ public class MaximizePresentersAlgo {
 	public boolean isFileExist(){
 		return new File("Presentation_File.csv").exists();
 	}
+	
+	/**
+	 * Method to get the number of maximum sessions in given hour
+	 * @param hours - no of hours given 
+	 * @param list - list of presentations
+	 * @return -  no of sessions 
+	 */
 	public List<Presentation> getNumberOfSessions(int hours, List<Presentation> list) {
 		List<Presentation> result = new ArrayList<>();
 		int totalHour = 0;
