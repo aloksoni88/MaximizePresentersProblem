@@ -43,12 +43,13 @@ public class MaximizePresentersAlgo {
 		System.out.println("Please provide the no of hours in session:");
 		int sessionHour = scanner.nextInt();
 		scanner.close();
-		System.out.println("Total Number of sessions are : ");
+		System.out.print("Total Number of sessions are : ");
 		
 		List<Presentation> result = obj.getNumberOfSessions(sessionHour, sortedList);
 		if (result == null || result.isEmpty()) {
 			System.out.println("Not enough presenters");
 		} else {
+			System.out.println(result.size());
 			System.out.println(result);
 		}
 
